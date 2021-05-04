@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    border: 2px solid black;
+    min-height: 400px;
+    width: 400px;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.container a{
+    color: red;
+    font-size: 20px;
+}
+.container h1{
+    padding-top:0px ;
+}
