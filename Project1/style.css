@@ -1,6 +1,7 @@
 :root{
     --success-color: green;
     --error-color: red;
+    margin:0;
 }
 
 

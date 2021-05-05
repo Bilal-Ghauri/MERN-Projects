@@ -5,6 +5,22 @@ const password = document.getElementById('password')
 const password1 = document.getElementById('password1')
 const formcontrol = document.getElementById('formcontrol')
 
+//function for every input field 
+function checkRequired(array){
+    array.forEach(function(input){
+        if(input.value === ""){
+            showError(input , `${capitalInput(input)} is required`)
+        }else{
+            showSuccess(input)
+        }
+    })
+}
+
+//function for captalized the first letter of input. 
+function capitalInput(input){
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1) ;
+}
+
 //checking if input fields are empty.
 function showError (input , message) {
     const former = input.parentElement;
@@ -29,28 +45,5 @@ function isEmailValid(email){
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    if(username.value === ""){
-        showError(username , "**Username is required**")
-    }else{
-        showSuccess(username)
-    }
-    if(email.value === ""){
-        showError(email , "**Email is required**")
-    }else if(!isEmailValid(email.value)){
-        showError(email , "**Please put a valid E-mail**")
-    }
-    else{
-        showSuccess(email)
-    }
-    if(password.value === ""){
-        showError(password , "**Password is required**")
-    }else{
-        showSuccess(password)
-    }
-    if(password1.value === ""){
-        showError(password1 , "**Confirm Password is required**")
-    }else{
-        showSuccess(password1)
-    }
+    checkRequired([username , email , password , password1]);
 })
-
