@@ -9,20 +9,32 @@
 </head>
 <body>
     <div class="container">
-        <div class="form" id="form">
+        <form class="form" id="form">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account!</p> <hr>
-            <div class="form-control">
+            <div class="formcontrol">
                 <input type="text" id="firstname" placeholder="First Name">
-                <input type="text" id="lastname" placeholder="Last Name">
-                <input type="email" id="email" placeholder="Email" >
-                <input type="password" id="password" placeholder="Password">
-                <input type="password" id="password1" placeholder="Confirm Pasword">
-                <button type="submit" id="submit" class="submit">Submit</button>
+                <small>Error message</small>
             </div>
-        </div>
-        <p class="outed">Already have an account? <a href="">Login Here
-        </a></p> 
-    </div>
+            <div class="formcontrol">
+                <input type="text" id="lastname" placeholder="Last Name">
+                <small>Error message</small>
+            </div>
+            <div class="formcontrol">
+                <input type="email" id="email" placeholder="Email">
+                <small>Error message</small>
+            </div>
+            <div class="formcontrol">
+                <input type="password" id="password" placeholder="Password">
+                <small>Error message</small>
+            </div>
+            <div class="formcontrol">
+                <input type="password" id="password1" placeholder="Confirm Password">
+                <small>Error message</small>
+            </div>
+            <button class="submit" id="submit" type="submit">Submit</button>
+        </form>
+    <p class="outed">Already have an account? <a href="">Login here!</a></p>
+    <script src="script.js"></script>
 </body>
 </html>
