@@ -36,9 +36,23 @@ function showSuccess(input){
 }
 
 //function for checking the email is valid.
-function isEmailValid(email){
+function checkEmail(input){
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if ( re.test ( input.value.trim() ) ) {
+        showSuccess(email);
+    }else{
+        showError(email,"Please put a valid E-mail.");
+    }
+}
+//checking the length of username,
+function checkLength(input){
+    if(input.value.length < 3){
+        showError(username , "Username contains at least 3 character");
+    }else if(input.value.length > 10){
+        showError(username , "Username must be within 10 character.")
+    }else{
+        showSuccess(input)
+    }
 }
 
 
@@ -46,4 +60,6 @@ function isEmailValid(email){
 form.addEventListener('submit', function(e){
     e.preventDefault();
     checkRequired([username , email , password , password1]);
+    checkEmail(email);
+    checkLength(username);
 })
