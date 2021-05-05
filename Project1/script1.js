@@ -48,13 +48,27 @@ function checkEmail(input){
 function checkLength(input){
     if(input.value.length < 3){
         showError(username , "Username contains at least 3 character");
-    }else if(input.value.length > 10){
-        showError(username , "Username must be within 10 character.")
+    }else if(input.value.length > 15){
+        showError(username , "Username must be within 15 character.")
     }else{
         showSuccess(input)
     }
 }
+//for checking the length of email.
+function checkEmailLength(input){
+    if(input.value.length < 8 ){
+        showError(password , "**Password must contains 8 characters or more!")
+    }
+    else{
+        showSuccess(password)
+    }
+}
 
+function checkPasswordMatch(input , input1){
+    if(input1.value !== input.value){
+        showError(password1 , "**Password must be match**")
+    }
+}
 
 
 form.addEventListener('submit', function(e){
@@ -62,4 +76,6 @@ form.addEventListener('submit', function(e){
     checkRequired([username , email , password , password1]);
     checkEmail(email);
     checkLength(username);
+    checkEmailLength(password);
+    checkPasswordMatch(password , password1)
 })
