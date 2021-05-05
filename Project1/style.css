@@ -1,95 +1,50 @@
-:root{
-    --success-color: green;
-    --error-color: red;
-    margin:0;
-}
-
-
-
 *{
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
 }
 body{
-    background-color: grey;
-    font-family: sans-serif;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
+    background-color: aliceblue;
 }
-
-.container{
-    min-height: 400px;
-    width: 400px;
-    border: 2px solid black;
-    margin: 0 auto;
-    background-color: lightgrey;
-    box-sizing: border-box;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.name{
-    text-align: center;
-}
-.formcontrol{
-    text-align: center;
-    padding: 10px;
-    font-family: sans-serif;
-    margin: 5px;
-}
-label{
-    display: block;
-    text-align: left;
-    padding: 3px;
-    font-family: sans-serif;
-    font-style: italic;
-    font-size: 15px;
+.form{
+    width: 335px;
+    height: 400px;
+    background-color: white;
+    margin:0 auto;
+    padding: 50px;
+    margin-top: 30px;
+    padding-top:10px;
+    box-shadow: 5px 5px 10px 7px rgba(0,0,0,0.3);
 }
 input{
     display: block;
-    width: 100%;
     padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 3px solid black;
-    padding-left: 20px;
+    margin: 20px;
+    width: 250px;
+    height: 17px;
 }
-small{
-    display: block;
-    text-align: left;
-    margin: 10px;
-    visibility: hidden;
+h1{
+    padding-top:10px ;
+    padding-bottom: 20px;
 }
-.submit{
-    width: 360px;
-    padding: px;
-    font-size: 15px;
-    height: 30px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    border: 3px solid black;
-    border-radius: 5px;
-    padding: 5px;
+p{
+    padding-bottom: 10px;
+}
+#firstname, #lastname{
     
 }
-.former-succes input{
-    border-color: red ;
+.submit{
+    width:265px;
+    margin-top: 16px ;
+    margin-left: 19px;
+    height: 30px;
 }
-
-.former.success input{
-    border-color: var(--success-color);
-}
-
-.former.error input{
-    border-color:var(--error-color);
-}
-
-.former.error small{
-    visibility: visible;
-    color: red;
+.outed{
+    text-align: center;
+    padding-top: 27px;
+    font-size: 18px;
 }
 .submit:hover{
+    background-color: rgba(0,0,0,0.5);
     color: white;
-    background-color: black;
     cursor: pointer;
 }

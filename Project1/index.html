@@ -5,46 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Signup Form</title>
+    <title>Sign Up</title>
 </head>
 <body>
     <div class="container">
-        <form class="form" id="form">
-            <div class="name">
-                <h1>Signup Form</h1>
-                <h4>
-                    Please enter your details for further details!
-                </h4>
+        <div class="form" id="form">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account!</p> <hr>
+            <div class="form-control">
+                <input type="text" id="firstname" placeholder="First Name">
+                <input type="text" id="lastname" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email" >
+                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="password1" placeholder="Confirm Pasword">
+                <button type="submit" id="submit" class="submit">Submit</button>
             </div>
-            <hr>
-            <div id="formcontrol" class="formcontrol">
-                <div class="former">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" placeholder="Enter Username">
-                    <small>Error message</small>
-                </div>
-                <div  class="former">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" placeholder="Enter Email">
-                    <small>Error message</small>
-                </div>
-                <div class="former">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password"  placeholder="Password">
-                    <small>Error message</small>
-                </div>
-                <div class="former">
-                    <label for="password1">Confirm Password:</label>
-                    <input type="password" id="password1"  placeholder="Confirm Password">
-                    <small>Error message</small>
-                </div>
-                
-            </div>
-            <button type="submit" id="submit" class="submit">
-                Submit
-            </button>
-        </form>
+        </div>
+        <p class="outed">Already have an account? <a href="">Login Here
+        </a></p> 
     </div>
-    <script src="script1.js"></script>
 </body>
 </html>
