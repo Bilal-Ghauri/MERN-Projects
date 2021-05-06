@@ -87,9 +87,14 @@ body{
 
 .text span{
     font-size: 25px;
+    color: green;
 }
 
 .seat:not(.occupied):hover{
     transform: scale(1.25);
     cursor:pointer;
+}
+.legend .seat:not(.occupied):hover{
+    transform: scale(1);
+    cursor: default;
 }
