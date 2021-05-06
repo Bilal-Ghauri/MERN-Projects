@@ -29,9 +29,40 @@ function checkRequired(subarray){
         }
     }
     )}
+//checking length for firstname.
+function checkLength(input){
+    if(input.value.length <3){
+        showError(input , `**${capitalId(input)} must contains at least 3 characters**`);
+    }else if(input.value.length >8 ){
+        showError(input , `**${input.id} should be within 8 characters**`)
+    }
+}
+//function for capitailized the first character of input fields.
+function capitalId(input){
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+//function for check if the email is valid
+function checkEmail(input){
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(re.test(input.value.trim())){
+        showSuccess(input);
+    }else{
+        showError(email , `**${capitalId(input)} must be valid!**`)
+    }
+}
+//function for checking the length of password
+function passwordLength(input){
+    if(input.value.length < 8){
+        showError(password , `**${capitalId(input)} should be at least 8 character**`)
+    }
+}
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
     checkRequired( [firstname,lastname,email,password,password1] );
-
+    checkLength(firstname);
+    checkLength(lastname);
+    checkEmail(email);
+    passwordLength(password)
 })
