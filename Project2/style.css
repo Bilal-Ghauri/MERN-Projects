@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(120,110,210,0.3);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+}
+.h2,.para{
+    text-align: left;
+}
+
+.movie label{
+    font-size: 18px;
+}
+.movie select{
+    padding: 5px;
+    font-size: 13px;
+    background-color: white;
+    margin-left: 5px;
+}
+
+.seat{
+    background-color: teal;
+    height: 18px;
+    width: 18px;
+    margin: 2px;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.row{
+    display: flex;
+}
+
+.text{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.seat.selected{
+    background-color: tomato;
+}
+.seat.occupied{
+    background-color: red;
+}
+
+.seat:nth-of-type(2){
+    margin-right: 20px;
+}
+.seat:nth-of-type(6){
+    margin-right: 20px;
+}
+.legend{
+    background-color: rgba(0,0,0,0.1);
+    list-style-type: none;
+    display: flex;
+}
+.legend li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:15px;
+}
+
+.legend small{
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.screen{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    margin:10px 0px;
+    transform: rotateX(-45deg);
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0);
+}
+.seat-container{
+    perspective: 900px;
+    
+}
+
+.text span{
+    font-size: 25px;
+}
+
+.seat:not(.occupied):hover{
+    transform: scale(1.25);
+    cursor:pointer;
+}
