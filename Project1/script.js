@@ -57,6 +57,15 @@ function passwordLength(input){
         showError(password , `**${capitalId(input)} should be at least 8 character**`)
     }
 }
+//function for checking password and confirm password are same. 
+function checkPasswordsMatch(input, input1){
+    if(input1.value !== input.value){
+        showError(input1 , `**${capitalId(input)} must be same**`);
+    }else if(input1.value === ""){
+        showError(input1 , `**${capitalId(input)} must be same**`);
+    }
+}
+
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -64,5 +73,6 @@ form.addEventListener('submit', function(e){
     checkLength(firstname);
     checkLength(lastname);
     checkEmail(email);
-    passwordLength(password)
+    passwordLength(password);
+    checkPasswordsMatch(password, password1);
 })
