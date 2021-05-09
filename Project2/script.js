@@ -49,7 +49,7 @@ function populateUI(){
             }
         })
     }
-    const selectedmovieIndex = localStorage.getItem('selectedMovieIndex');
+    const selectedmovieIndex = localStorage.getItem('selectedmovieIndex');
     if(selectedmovieIndex !== null){
         movie.selectedIndex = selectedmovieIndex;
     }
