@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+
 *{
     box-sizing: border-box;
 }
@@ -9,6 +12,7 @@ body{
     flex-direction: column;
     height: 100vh;
     display: flex;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .h2,.para{
     text-align: left;
@@ -18,7 +22,7 @@ body{
     font-size: 18px;
 }
 .movie select{
-    padding: 5px;
+    padding: 15px;
     font-size: 13px;
     background-color: white;
     margin-left: 5px;
@@ -28,7 +32,8 @@ body{
     background-color: teal;
     height: 18px;
     width: 18px;
-    margin: 2px;
+    margin-right: 10px;
+    margin-bottom: 8px;
     display: flex;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -86,7 +91,7 @@ body{
 }
 
 .text span{
-    font-size: 25px;
+    font-size: 20px;
     color: green;
 }
 
@@ -97,4 +102,10 @@ body{
 .legend .seat:not(.occupied):hover{
     transform: scale(1);
     cursor: default;
+}
+
+.row > .seat{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
