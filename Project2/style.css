@@ -111,4 +111,6 @@ body{
 }
 #movie{
     padding: 5px 20px;
+    font-family: sans-serif;
+    font-weight: bolder;
 }
