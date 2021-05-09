@@ -109,3 +109,6 @@ body{
     align-items: center;
     display: flex;
 }
+#movie{
+    padding: 5px 20px;
+}
