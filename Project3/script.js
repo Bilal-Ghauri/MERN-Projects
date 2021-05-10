@@ -6,11 +6,12 @@ let timeStamp = document.getElementById('timestamp');
 
 
 function updateProgress(){
-    progress.value = (video.currentTime / video.duration) * 100;
+    video.currentTime = (progress.value * video.duration) / 100;
 }
 
 function updateTimeProgress(){
-    video.currentTime = (progress.value * video.duration) / 100;
+    progress.value = (video.currentTime / video.duration) * 100;
+    
 
     let mins = Math.floor(video.currentTime / 60);
     if(mins < 10){
@@ -68,6 +69,6 @@ play.addEventListener('click' , videoPlay);
 //function on stop button when clicked the stop button video will stop and paused.
 stop.addEventListener('click' , stopVideo)
 //function for updating progress when time updates/
-video.addEventListener('timeupdate' , updateProgress)
+video.addEventListener('timeupdate' , updateTimeProgress)
 
-progress.addEventListener('change', updateTimeProgress)
+progress.addEventListener('change', updateProgress)
