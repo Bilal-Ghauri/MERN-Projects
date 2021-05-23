@@ -87,7 +87,8 @@ body{
 }
 .seat-container{
     perspective: 900px;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .text span{
