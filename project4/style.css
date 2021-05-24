@@ -33,7 +33,8 @@ body{
     border-color: lightblue;
     outline: 0;
     font-size: 17px;
-
+    border-width: 5px;
+    font-size: 17px;
 }
 .input{
     padding: 5px;
@@ -42,7 +43,8 @@ body{
     border-color: lightblue;
     outline: 0px;
     font-size: 17px;
-
+    border-width: 5px;
+    
 }
 .swap{
     padding: 5px;
@@ -52,7 +54,33 @@ body{
     color: white;
     outline: 0px;
     font-size: 17px;
-}
+}   
 small{
     font-size: 15px;
+    text-align: center;
+    color: blue;
+    font-weight: 700px;
+    font-size: 15px;
+}
+
+#rate{
+    padding: 15px 5px;
+    font-size: 18px;
+    background-color: blue;
+    color: white;
+    margin: 20px 0px;
+    width: 100%;
+    text-align: center;
+}
+#nextPage a{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    text-decoration:none ;
+    outline: 0px;
+}
+#nextPage{
+    outline: 0px;
+    margin-top: 20px;
 }
