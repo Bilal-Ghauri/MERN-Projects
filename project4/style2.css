@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+#header{
+    background-color: blue;
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+    padding: 15px 0px;
+    margin-top: 20px;
+}
+.container h3{
+    margin: 10px 0px;
+    background-color:blue;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.country{
+    border-width: 5px;
+    outline: 0;
+    font-size: 18px;
+    text-align: center;
+    border-color: blue;
+    padding: 5px;
+}
+.coRates{
+    min-height: 400px;
+    width:400px;
+    border: 2px solid blue;
+    margin-top: 20px;
+    display: block;
+}
