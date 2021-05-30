@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 30px;
+    background-color: #a6a6a6;
+    
+}
+body h2{
+    padding: 20px;
+}
+.container{
+    display: flex;
+}
+.main{
+    min-height: 150px;
+    width: 230px;
+    margin:30px 50px;
+}
+.userWealth{
+    flex:1;
+    min-height: 150px;
+    width: 500px;
+    padding: 0px 20px;
+    border-left: 2px solid black;
+}
+.userWealth h2{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+button{
+    display: block;
+    padding: 5px;
+    height: 28px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    outline: 0px;
+}
+button:hover{
+    background-color: #262626;
+    color: white;
+}
