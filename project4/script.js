@@ -14,9 +14,10 @@ function calculate(){
     //getting the value of seccond country from dropdown
     const currencyTwo = countryTwo.value;
     //fetching data from APIs
-    fetch(`https://v6.exchangerate-api.com/v6/f2326d33544d9391625f5b32/pair/${currencyOne}/${currencyTwo}`)
+    fetch(`https://v6.exchangerate-api.com/v6/98f86149850e2234a78d914f/pair/${currencyOne}/${currencyTwo}`)
     .then(res => res.json())
     .then(data => {
+        console.log(data);
        //for conversion rate  
         const conversionRate = data.conversion_rate;
         //changing the value of amount two
