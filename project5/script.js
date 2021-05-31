@@ -47,7 +47,7 @@ function sortWealth(){
 }
 function totalMoney(){
     updateDOM();
-    let sum = data.reduce((acc , users)=> (acc+= +users.balance),0)
+    let sum = (data.reduce((acc , users)=> (acc+= +users.balance),0)).toFixed(2)
     let child = document.createElement('div');
     child.classList.add('totalMoney');
     child.innerHTML = `<h3>Total Wealth: ${sum}</h3>`;
