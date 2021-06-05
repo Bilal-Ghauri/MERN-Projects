@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e36868430f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="style.css">
     <title>Video Player</title>
 </head>
 <body>
-    <h1>Video Player</h1>
     <div class="container">
-        <video src="videos/TOP GUN 2_ Maverick Trailer 2 (2021).mp4"></video>
+        <h1>Video Player</h1>
+        <video id="video" src="videos/TOP GUN 2_ Maverick Trailer 2 (2021).mp4"></video>
+        <div class="icons">
+            <button id="play"><i class="fas fa-play fa-2x"></i></button>
+            <button id="stop"><i class="fas fa-stop fa-2x"></i></button>
+            <input type="range" id="progress">
+            <div class="timestamp" id="timestamp">00:00</div>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
