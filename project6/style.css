@@ -29,6 +29,9 @@ nav ul li {
 nav ul li:first-of-type{
     border-top:1px solid white;
 }
+nav ul li:hover{
+    text-decoration: underline;
+}
 nav ul li a{
     text-decoration: none;
     color: white;
@@ -46,6 +49,7 @@ body{
     color: white;
     font-family: 'Lato', sans-serif;
     padding: 20px 40px;
+    transition: 0.5s ease;
 }
 header{
     padding: 40px;
@@ -74,6 +78,7 @@ header button{
     position: absolute;
     top: 10px;
     left: 10px;
+    cursor: pointer;
 }
 .signup:hover{
     color: white;
@@ -92,6 +97,9 @@ header button{
     padding: 40px;
     text-align: center;
     display: none;
+}
+.signupContainer.show{
+    display: block;
 }
 .formHeader{
     background-color:#303952 ;
@@ -119,5 +127,8 @@ header button{
     background-color: #303952;
     color: white;
     outline: 0px;
+    cursor: pointer;
+}
+.close:hover{
     cursor: pointer;
 }
