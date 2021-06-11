@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div ><img src="bilal.jpg" alt="My picture" class="navpicture"></div>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Qualification</a></li>
+            <li><a href="#">Address</a></li>
+            <li><a href="#">Skills</a></li>
+        </ul>
+    </nav>
+    <header class="container">
+        <div class="navlogo"><i class="fas fa-list fa-2x" ></i></div>
+        <h1>Hello! I am Bilal Ghauri</h1>
+        <p>
+            I am a student of BSIT at Emerson University Multan.
+            I have also skills in web development but for now i am learning it.
+            I want to become a freelancer.
+        </p>
+        <button class="signup" id="signup">SignUp</button>
+    </header>
+    <main>
+        <div class="signupContainer">
+            <div class="formHeader">
+                <h2>Signup</h2>
+                <div class="close"><i class="fas fa-times-circle fa-2x"></i></div>
+            </div>
+            <form class="signupForm">
+                <div class="form-control">
+                    <label for="username">Username:</label>
+                    <input type="text" placeholder="Enter your name!" id="username">
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="Enter your Email!" id="email">
+                </div>
+                <div class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="Enter your Password!" id="password">
+                </div>
+                <div class="form-control">
+                    <label for="password1">Confirm your Password:</label>
+                    <input type="password" placeholder="Enter Password again" id="password1">
+                </div>
+                <div><button class="submit">Submit</button></div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        Thanks for Visit here!
+    </footer>
+</body>
+</html>
