@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #353b48;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+    background-color: white;
+    height: 30px;
+    outline: 0px;
+    border-radius: 10px;
+}
+
+input[type='text']{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: 0px;
+    border: 0px;
+    font-size: 20px;
+    padding-left: 10px;
+    width: 300px;
+    font-weight: bold;
+}
+.search{
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+}
+
+.generate-btn{
+    margin-left: 10px;
+    background-color: white;
+    outline: 0px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.meals{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.meal{
+    height: 180px;
+    width: 180px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.meal img{
+    width: 100%;
+    height: 100%;
+}
+.meal-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    padding: 0px 10px;
+}
+
+.meal:hover .meal-info{
+    opacity: 1;
+}
+
+.selected-meal{
+    text-align: center;
+}
+.image{
+    height: 200px;
+    width:  200px;
+    margin: 0  auto;
+}
+
+.image img{
+    height: 100%;
+    width: 100%;
+}
+
+.intruction{
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 20px 0px;
+}
+.intruction h2{
+    text-align: center;
+}
+
+.ingredients h2{
+    border: 2px dotted white;
+    padding: 20px;
+}
+
+.ingredients li{
+    display: block;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+
