@@ -39,6 +39,7 @@ function searchMeal(e){
             }
         });
         searchItem.value = "";
+        selectedMeal.innerHTML = "";
     }else{
         meals.innerHTML="";
         alert('Please enter the meal')
@@ -76,8 +77,38 @@ function getMealId(mealId){
         `
         mealHeading.innerHTML = "";
         meals.innerHTML ="";
-    } 
+    }
     );
+}
+
+function randomMeal(e){
+    e.preventDefault();
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+    .then(res => res.json())
+    .then(data =>{
+        let meal = data.meals[0];
+        let ingredients = [];
+        for(let i=1; i<=20 ; i++){
+            if(meal[`strIngredient${i}`]){
+                ingredients.push(`${meal[`strIngredient${i}`]} : ${meal[`strMeasure${i}`]}`);
+            }
+        }
+        selectedMeal.innerHTML=`
+            <h1>${meal.strMeal}</h1>
+            <h2>Meal Region : ${meal.strArea} </h2>
+            <div class="image">
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+            </div>
+            <div class="instruction">
+                <h2>Recipe Instructions:</h2>
+                ${meal.strInstructions}
+            </div>
+            <h2>Ingredients:</h2>
+            <div class="ingredients">
+                ${ingredients.map(ingredient=> `<li>${ingredient}</li>`).join(' ')}
+            </div>
+        `
+    })
 }
 
 search.addEventListener('click', searchMeal)
@@ -95,3 +126,5 @@ meals.addEventListener('click', e=>{
         getMealId(mealId)
     }
 })
+
+generate.addEventListener('click', randomMeal)
