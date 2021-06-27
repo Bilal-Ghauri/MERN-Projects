@@ -15,8 +15,9 @@ const amount = document.getElementById('amount')
 //div for showing elements in history
 let history = document.getElementById('history')
 //Array for all the transactions..
-let transactions = [];
-populateUI()
+let transactions = [
+];
+
 
 //function to display all the transactions stored in transactions array.
 function addTransaction(e){
@@ -42,11 +43,6 @@ function addTransaction(e){
     //function for displaying all the values. 
     init()
 }
-function populateUI(){
-    transactions = JSON.parse(localStorage.getItem('transactions'));
-    transactions.forEach(showTransactions);
-    init();
-}
 
 //function to delete a transaction from history and update total,credit,debit balance
 function deleteTransaction(id){
@@ -54,6 +50,8 @@ function deleteTransaction(id){
     transactions = transactions.filter(transaction => transaction.id !== id)
     init()
 }
+
+
 
 //function to show transaction in history if credit and debit
 function showTransactions(transaction){
@@ -83,6 +81,7 @@ function init(){
     showBalance()
 }
 
+
 //function for showing all the balance, credit and debit
 function showBalance(){
     //creting an array by mapping the transactions array and all the balance and stored in money array for furthur processing/looping.
@@ -101,6 +100,7 @@ function showBalance(){
     debit.innerHTML =`$${debits}`
 
 }
+
 
 //event listener for add transaction button to add the value of description and amount
 transaction.addEventListener('click', addTransaction)
