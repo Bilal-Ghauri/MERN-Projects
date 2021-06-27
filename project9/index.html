@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+        <h4>Account Balance</h4>
+        <h3>$<span id="balance">0.00</span></h3>
+        <div class="credit-debit-container">
+            <div class="credit">
+                <h4>Credit:</h4>
+                <h3><span class="money credit">$+0.00</span></h3>
+            </div>
+            <div class="debit">
+                <h4>Debit:</h4>
+                <h3><span class="money debit">$-0.00</span></h3>
+            </div>
+        </div>
+        <h4 class="bottom">History</h4>
+        <div class="history" id="history"> 
+            
+        </div>
+        <h4 class="bottom">Add Transactions</h4>
+        <form id="form">
+            <div class="form-control">
+                <label for="reason">Description:</label>
+                <input type="text" placeholder="Enter Reason for Transaction!" id="description">
+            </div>
+            <div class="form-control">
+                <label for="amount">Transaction Amount:</label>
+                <p>(Positive-Credit , Negative-Debit)</p>
+                <input type="number" placeholder="Enter Amount for Transaction!" id="amount">
+            </div>
+            <button id="addTransaction" class="addTransaction">Add Transaction</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
