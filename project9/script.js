@@ -18,7 +18,7 @@ let history = document.getElementById('history')
 let transactions = [
 ];
 
-
+populateUI()
 //function to display all the transactions stored in transactions array.
 function addTransaction(e){
     e.preventDefault();
@@ -68,6 +68,7 @@ function showTransactions(transaction){
     `
     //appending the child element to history
     history.appendChild(child)
+    
 }
 
 //main function who display all the data when invoked.
@@ -76,10 +77,17 @@ function init(){
     history.innerHTML = "";
     //loop through all the elements of transactions array
     transactions.forEach(showTransactions)
+    localStorage.setItem("transactions", JSON.stringify(transactions))
     //function for showing all the balance, credit and debit
     showBalance()
 }
-
+function populateUI(){
+    let array = JSON.parse(localStorage.getItem("transactions"))
+    array.forEach(showTransactions)
+    balance.innerHTML = `${localStorage.getItem('totalBalance')}`
+    credit.innerHTML = `$+${localStorage.getItem("credit")}`
+    debit.innerHTML = `$-${localStorage.getItem("debit")}`
+}
 
 //function for showing all the balance, credit and debit
 function showBalance(){
@@ -91,13 +99,16 @@ function showBalance(){
     let credits = money.filter(item => item >0 ).reduce((acc , item) => acc+= +item,0).toFixed(2)
     //filter all the negative elements stores in money array 
     let debits = money.filter(item => item < 0 ).reduce((acc , item) => acc+= +item,0).toFixed(2);
+    
     //add balance inneraHTML from the bal variable
     balance.innerHTML = `${bal}`
     //add credit innerHTML from the credits variable
     credit.innerHTML = `$+${credits}`
     //add debit innerHTML from the credits variable
     debit.innerHTML =`$${debits}`
-
+    localStorage.setItem("totalBalance", bal)
+    localStorage.setItem("credit", credits)
+    localStorage.setItem("debit", debits)
 }
 
 
