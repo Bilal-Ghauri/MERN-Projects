@@ -17,7 +17,7 @@ let history = document.getElementById('history')
 //Array for all the transactions..
 let transactions = [
 ];
-populateUI()
+
 
 //function to display all the transactions stored in transactions array.
 function addTransaction(e){
@@ -51,11 +51,7 @@ function deleteTransaction(id){
     init()
 }
 
-function populateUI(){
-    transactions = JSON.parse(localStorage.getItem("transactions"))
-    transactions.forEach(showTransactions)
-    init()
-}
+
 
 //function to show transaction in history if credit and debit
 function showTransactions(transaction){
@@ -80,7 +76,6 @@ function init(){
     history.innerHTML = "";
     //loop through all the elements of transactions array
     transactions.forEach(showTransactions)
-    localStorage.setItem("transactions" , JSON.stringify(transactions))
     //function for showing all the balance, credit and debit
     showBalance()
 }
