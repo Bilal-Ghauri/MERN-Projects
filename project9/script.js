@@ -68,7 +68,6 @@ function showTransactions(transaction){
     `
     //appending the child element to history
     history.appendChild(child)
-    
 }
 
 //main function who display all the data when invoked.
@@ -82,11 +81,9 @@ function init(){
     showBalance()
 }
 function populateUI(){
-    let array = JSON.parse(localStorage.getItem("transactions"))
-    array.forEach(showTransactions)
-    balance.innerHTML = `${localStorage.getItem('totalBalance')}`
-    credit.innerHTML = `$+${localStorage.getItem("credit")}`
-    debit.innerHTML = `$-${localStorage.getItem("debit")}`
+    transactions = JSON.parse(localStorage.getItem("transactions"))
+    transactions.forEach(showTransactions)
+    showBalance()
 }
 
 //function for showing all the balance, credit and debit
@@ -106,9 +103,7 @@ function showBalance(){
     credit.innerHTML = `$+${credits}`
     //add debit innerHTML from the credits variable
     debit.innerHTML =`$${debits}`
-    localStorage.setItem("totalBalance", bal)
-    localStorage.setItem("credit", credits)
-    localStorage.setItem("debit", debits)
+    
 }
 
 
