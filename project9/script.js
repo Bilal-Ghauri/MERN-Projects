@@ -81,9 +81,15 @@ function init(){
     showBalance()
 }
 function populateUI(){
-    transactions = JSON.parse(localStorage.getItem("transactions"))
-    transactions.forEach(showTransactions)
-    showBalance()
+
+    let getTransaction = JSON.parse(localStorage.getItem("transactions"))
+    if(getTransaction !== null && getTransaction.length>0){
+        getTransaction.forEach(
+            item => transactions.push(item)
+        )
+    }
+    init()
+    
 }
 
 //function for showing all the balance, credit and debit
