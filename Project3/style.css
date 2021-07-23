@@ -1,27 +1,43 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
 }
 body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: white;
+}
+h2{
+    padding: 5px;
+    text-align: center;
+    padding-bottom: 0px;
 }
 .container{
-
+    height: 380px;
+    width: 500px;  
+    background-color: black;
+    border-radius: 10px;
+}
+video{
+    padding: 0px;
+    margin: 0px;
+    height: 300px;
+    width: 100%;
 }
 .icons{
+    margin-top: 0px;
     display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-top: 0px;
+}
+#play,#stop,#range{
+    margin: 0px 10px 0px 0px;
+    cursor: pointer;
 }
 #video{
-    height: 300px;
-    width: 250px;
-}
-#play{
-    margin-right: 3px;
-}
-h1{
-    margin-bottom: 0px;
-    text-align: center;
+    cursor: pointer;
 }
