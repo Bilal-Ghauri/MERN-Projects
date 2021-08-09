@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Typing Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="settingsDropDown gone">
+            <label for="difficulty">Difficulty:</label>
+            <select  id="settingsContainer">
+                <option value="easy">easy</option>
+                <option value="medium">medium</option>
+                <option value="fast">fast</option>
+            </select>
+        </div>
+        <div class="gameContainer">
+            <h2>Fast Typing Game</h2>
+            <p>Type this word as fast as you can:</p>
+            <div class="timeScore">
+                <div class="time">
+                    <div >Time :<span id="time"></span></div>
+                </div>
+                <div class="score">
+                    <div>Score :<span id="score">0</span></div>
+                </div>
+            </div>
+            <div class="words">
+                <div id="word">
+                </div>
+            </div>
+            <div class="inputContainer">
+                <input type="text" id="inputWord" autocomplete="off">
+            </div>
+            <div class="status" id="status">
+            </div>
+            <div class="gameOver" id="gameOver">
+                <h2>Game Over!</h2>
+                <h3><span>Your score is</span><span id="finalScore">0</span></h3>
+                <button id="playBtn" onclick="location.reload()">Play Again!</button>
+            </div>
+            <div class="settingsBtn-container" id="settingsBtn">
+                <i class="fas fa-cog fa-2x"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
