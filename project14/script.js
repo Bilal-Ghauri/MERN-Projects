@@ -4,6 +4,7 @@ const toggleContainerCloseBtn = document.getElementById('close');
 const voicesDropDown = document.getElementById('voices');
 const textInput = document.getElementById('text');
 const textReadBtn = document.getElementById('read');
+const textArea = document.getElementById('textArea')
 
 let data = [
     {
@@ -59,6 +60,33 @@ let data = [
         text: 'I m writing a Book!'
     },
 ]
+let voices;
+let speech = window.speechSynthesis;
+let message = new SpeechSynthesisUtterance()
+
+function populateVoiceList(){
+    voices = speech.getVoices();
+    
+    voices.forEach(voice => {
+        let option = document.createElement('option');
+        option.textContent = `${voice.name}`;
+        
+        if(voice.default){
+            option.textContent += `--Default`
+        }
+
+        option.setAttribute('voice-lang' , voice.lang);
+        option.setAttribute('voice-name' , voice.name);
+
+        voicesDropDown.appendChild(option)
+    })
+}
+
+function populateVoiceChange(){
+    if(speechSynthesis.onvoiceschanged !== undefined){
+        speechSynthesis.onvoiceschanged = ()=> populateVoiceList();
+    }
+}
 
 data.forEach(showContent)
 
@@ -68,7 +96,37 @@ function showContent(content){
 
     div.innerHTML = `
         <img src="${content.img}" alt= " " />    
-        <p>${content.text}
+        <p>${content.text}</p>
     `
+
+    div.addEventListener('click', ()=>{
+        setText(content.text);
+        speakText()
+    })
     mainContainer.appendChild(div);
 }
+
+function setText(text){
+    message.text = text;
+}
+
+function speakText(){
+    speechSynthesis.speak(message)
+}
+
+
+populateVoiceChange()
+
+customTextBtn.addEventListener('click', ()=>{
+    textArea.classList.add('show')
+})
+
+toggleContainerCloseBtn.addEventListener('click', ()=>{
+    textArea.classList.remove('show')
+})
+
+speechSynthesis.addEventListener('voiceschanged', populateVoiceChange)
+textReadBtn.addEventListener('click', ()=>{
+    setText(textInput.value);
+    speakText()
+})
