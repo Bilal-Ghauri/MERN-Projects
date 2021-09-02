@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Text to speech</title>
+</head>
+<body>
+    <h2>Web Speech</h2>
+    <button id="custom-text-btn" class="custom-text-btn">Toggle Custom Text</button>
+    <main id="main" class="main"></main>
+    <div class="textarea ">
+        <button class="btn" id="close">X</button>
+        <h3>Change Voice</h3>
+        <div class="dropdown">
+            <select  id="voices" class="voices"></select>
+        </div>
+        <div class="text">
+            <textarea  id="text" placeholder="Enter text..."></textarea>
+        </div>
+        <button id="read" class="read">Read Cusotm Text</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
