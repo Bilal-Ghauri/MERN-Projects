@@ -31,7 +31,7 @@ function checkRequired(subarray){
     )}
 //checking length for firstname.
 function checkLength(input){
-    if(input.value.length <3){
+    if(input.value.length < 3){
         showError(input , `**${capitalId(input)} must contains at least 3 characters**`);
     }else if(input.value.length >8 ){
         showError(input , `**${input.id} should be within 8 characters**`)

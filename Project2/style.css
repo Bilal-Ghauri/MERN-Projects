@@ -1,142 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     box-sizing: border-box;
+    margin: 0;
 }
-
 body{
-    background-color: rgba(120,110,210,0.3);
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    font-family: 'Nunito Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: #006266;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
-.seat-container{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    perspective: 900px;
 }
-.userView{
+.container h1{
+    margin-bottom: 10px;
+}
+.container .movies{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 10px;
 }
-.userView ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.movies{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.h2,.para{
-    text-align: center;
-}
-
-.movie label{
+label{
     font-size: 18px;
 }
-.movie select{
-    padding: 15px;
-    font-size: 13px;
-    background-color: white;
-    margin-left: 5px;
+.container .movies #movies{
+    width: 200px;
+    margin:0 5px;
+    font-size: 17px;
+    outline: 0;
 }
-
-.seat{
-    background-color: teal;
-    height: 18px;
-    width: 18px;
-    margin-right: 10px;
-    margin-bottom: 8px;
+.container .applied-seats{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.container .applied-seats div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.seat{
+    height: 22px;
+    width: 22px;
+    background-color: #A3CB38;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin:5px;
+    cursor: pointer;
 }
-
 .row{
     display: flex;
 }
-
-.text{
-    margin-top: 20px;
-    font-size: 18px;
-}
-
 .seat.selected{
-    background-color: tomato;
+    background-color: #D980FA;
+}
+.seat:not(.occupied):active{
+    transform: scale(0.8);
 }
 .seat.occupied{
     background-color: red;
-}
-
-.seat:nth-of-type(2){
-    margin-right: 20px;
-}
-.seat:nth-of-type(6){
-    margin-right: 20px;
-}
-.legend{
-    background-color: rgba(0,0,0,0.1);
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.legend li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right:15px;
-}
-
-.legend small{
-    margin-left: 5px;
-    margin-top: 3px;
+    cursor:default;
 }
 .screen{
-    height: 100px;
-    width: 100%;
-    background-color: white;
-    margin:10px 0px;
-    transform: rotateX(-45deg);
-    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0);
-}
-.seat-container{
-    perspective: 900px;
-    display: flex;
-    flex-direction: column;
-}
-
-.text span{
-    font-size: 20px;
-    color: green;
-}
-
-.seat:not(.occupied):hover{
-    transform: scale(1.25);
-    cursor:pointer;
-}
-.legend .seat:not(.occupied):hover{
-    transform: scale(1);
-    cursor: default;
-}
-
-.row > .seat{
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    width: 350px;
+    height: 150px;
+    background-color: rgba(0,0,0,0.5);
+    margin: 10px 0px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 #movie{
-    padding: 5px 20px;
-    font-family: sans-serif;
-    font-weight: bolder;
+    height: 100%;
+    width: 100%;
+}
+.status p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.status span{
+    font-size: 24px;
 }
