@@ -5,27 +5,31 @@
     padding: 0;
 }
 body{
-    align-items: center;
-    justify-content: center;
     min-height: 120vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h3{
+    text-align: center;
 }
 #header{
     background-color: blue;
     width: 100%;
     color: white;
     padding: 10px 15px;
-    margin: 10px 0px;
     font-size: 25px;
+    margin-top: 20px;
 }
 p{
     font-size: 20px;
     padding: 15px 0px;
-    margin-top: 20px;
+    margin-top: 5px;
+    text-align: center;
 }
 .container h3{
-    margin: 10px 0px;
+    margin: 5px 0px;
     background-color:blue;
     color: white;
     padding: 10px;
@@ -38,10 +42,41 @@ p{
     text-align: center;
     border-color: blue;
     padding: 5px;
+    margin: 0 auto;
+}
+.index{
+    text-align: center;
 }
 .coRates{
     min-height: 400px;
-    width:400px;
-    border: 2px solid blue;
+    min-width:200px;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    overflow: hidden;
+}
+h4{
+    border: 3px solid blue;;
+    width: 200px;
+    height: 50px;
+    color: black;
+    margin: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:380px) {
+    .country{
+        font-size: 15px;
+    }
+}
+@media (max-width:330px) {
+    .country{
+        font-size: 12px;
+    }
 }
