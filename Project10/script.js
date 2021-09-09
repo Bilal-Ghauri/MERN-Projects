@@ -39,7 +39,7 @@ function updateTime(e){
     const clickLocation = e.offsetX;
     const duration = gaana.duration;
 
-    gaana.currentTime = clickLocation / width *duration;
+    gaana.currentTime = clickLocation / width * duration;
 }
 
 function timeUpdate(e){
