@@ -69,6 +69,14 @@ h4{
     justify-content: center;
     align-items: center;
 }
+.h2{
+    max-width: 380px;
+    min-width: 200px;
+    text-align: center;
+    border: 5px solid blue;
+    font-size: 19px;
+    margin: 10px auto;
+}
 
 @media (max-width:380px) {
     .country{
