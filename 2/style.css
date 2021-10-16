@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("web.jpeg");
+    background-repeat:no-repeat ;
+    background-size: cover;
+    color: white;
+}
+.slideBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 30px;
+    border-bottom: 2px solid gray;
+    position: relative;
+}
+.interior
+{
+    font-size: 22px;
+}
+.items{
+    display: flex;
+}
+.items li{
+    list-style-type: none;
+    padding: 10px 5px;
+    margin: 0px 10px;
+    position: relative;
+}
+.items a{
+    text-decoration: none;
+    color: white;
+}
+.slideBar li a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    transition: 0.5s ease;
+}
+.slideBar li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 0%;
+    background-color: red;
+    transition: 0.5s ease;
+}
+
+.slideBar a:hover::before{
+    width: 100%;
+}
+.slideBar a:hover::after{
+    width: 100%;
+}
+
+
+.main{
+    min-height: 300px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -50px;
+    text-align: center;
+}
+.main h1{
+    text-align: center;
+    margin: 5px 0px;
+}
+.main p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0px;
+    background-color: rgba(124, 115, 115, 0.8);
+    color: white;
+    outline: 0px;
+    border:none;
+    font-size: 18px;
+}
+

@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    
+}
+.first-div{
+    min-height: 110vh;
+    color: white;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('webimg.jpeg');
+    background-size: cover;
+}
+.slidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: black;
+}
+.intro
+{
+    font-weight: bolder;
+    font-size: 23px;
+}
+.buttonSlide{
+    display: flex;
+}
+li{
+    list-style-type: none;
+    margin: 0 20px;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li:hover{
+    background-color: red;
+}
+h1{
+    font-size: 50px;
+}
+.main{
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    outline: none;
+    height: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+.second-div{
+    min-height: 110vh;
+    padding: 50px 0px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutMe{
+    padding-top: 20px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+.me{
+    height: calc(100vh - 100px);
+    display: flex;
+}
+.mypic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.mypic img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.myIntro{
+    margin-top: 30px;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
+.myIntro h2{
+    margin: 10px 0px;
+    font-size: 25px;
+}
+.myIntro p{
+    text-align:left;
+    line-height: 25px;
+    word-spacing: 1.5px;
+    font-size: 18px;
+}
+#btn{
+    background-color: white;
+    color: red;
+        border: 1px solid black;
+}
+
+#btn:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
+.third-intro{
+    text-align: center;
+}
+.third-div{
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content{
+    display: flex;
+    margin-top: 50px;
+}
+.content div{
+    text-align:center;
+    min-height: 200px;
+    width: 300px;
+    margin: 0 10px;
+    background-color: rgba(182, 159, 159, 0.5);
+    padding: 20px;
+}
+.content div h3{
+    text-align: center;
+    margin: 10px 0px;
+}
+.content div p{
+    line-height: 20px;
+    word-spacing: 1px;
+}
+.content div:hover{
+    transform: scale(1.07);
+    background-color: red;
+}
+.fourth-div{
+    min-height: 100vh;
+    padding: 100px 30px;
+}
+.fourth-div .fourth-intro{
+    text-align:center;
+    margin: 10px 0px 20px 0px;
+}
+.fourth-div .fourth-main{
+    display: flex;
+}
+.fourth-div .fourth-main .skills{
+    width: 50%;
+    height: 100%;
+    padding: 50px 20px;
+}
+.fourth-div .fourth-main .stats{
+    width: 50%;
+    padding: 30px 20px;
+}
+.ranges {
+    padding: 0px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 5px;
+}
+#fourthbtn{
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+}
+.ranges div{
+    border-radius: 5px;
+    width: 40%;
+    height: 10px;
+    background-color: red;
+}
+
+.ranges{
+    margin:10px 0px;
+}
+.html .ranges div{
+    width: 90%;
+}
+.css .ranges div{
+    width: 60%;
+}
+.javascript .ranges div{
+    width: 70%;
+}
+.php .ranges div{
+    width: 30%;
+}
+.mysql .ranges div{
+    width: 20%;
+}
+
+.fifth-div{
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 50px 30px;
+}
+.fifth-intro{
+    text-align:center;
+    margin-bottom: 20px;
+}
+.friends{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.friendImg img{
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.friend{
+    margin: 10px;
+    height: 300px;
+    width: 280px;
+    text-align:center
+}
+.friend p{
+    text-align:left;
+}
+
+.sixth-div{
+    min-height: 100vh;
+    padding: 50px 30px;
+}
+.sixth-intro{
+    text-align: center;
+}
+.sixth-main{
+    display:flex;
+    margin: 30px 0px;
+}
+.sixth-main .getInTouch, .message{
+    width: 50%;
+}
+.getInTouch{
+    padding: 20px ;
+}
+.getInTouch h3{
+    margin: 10px 0px;
+}
+.getInTouch p{
+    margin-bottom: 10px;
+}
+.getInTouch .name,.number,.address{
+    margin:8px 0px;
+    min-height: 50px;
+    display: flex;
+}
+
+.nameGif,.addGif,.numGif{
+    margin-right: 10px;
+    font-size: 20px;
+    height: 100%;
+    width: 20px;
+}
+.names,.addres,.num{
+    display: flex;
+    flex-direction: column;
+}
+
+.nameGif{
+    font-size: 30px;
+}
+
+.message{
+    padding: 50px 20px;
+}
+.nameEmail{
+    display: flex;
+    width: 100%;
+}
+input{
+    margin: 10px 0px;
+    width: 100%;
+    height: 30px;
+    margin-right: 10px;
+}
+textarea{
+    margin-top: 20px;
+    width: 100%;
+}
+.msgbtn button{
+    background-color: black;
+    color: white;
+}
+
+
+@media (max-width: 960px) {
+    .slidebar{
+        flex-direction: column;
+    }
+    .slidebar .intro{
+        margin-top: 20px 0px;
+    }
+    .me{
+        flex-direction: column;
+    }
+    .second-div {
+        min-height: 120vh;
+    }
+    .mypic{
+        width: 100%;
+    }
+    .mypic img{
+        height: 200px;
+        width: 200px;
+        margin: 20px 0px;
+    }
+    .myIntro{
+        margin: 0 auto;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content div{
+        margin: 10px 0px;
+    }
+    .fourth-main{
+        flex-direction: column;
+    }
+    .fourth-div .fourth-main .skills{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .fourth-div .fourth-main .stats{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+footer{
+    font-size: 21px;
+    height: 70px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 700px) {
+    .second-div{
+        min-height: 120vh;
+    }
+    .slidebar{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        margin: 0px 5px;
+        padding: 7px;
+    }
+    .me{
+        flex-direction: column;
+    }
+    .second-div{
+        margin: 0px;
+        width: 100%;
+    }
+    .mypic{
+        width: 100%;
+        margin: 20px auto;
+    }
+    .aboutMe{
+        padding: 0px;
+        margin: 0px;
+    }
+    .mypic img{
+        margin: 0 auto;
+        height: 100px;
+        width: 100px;
+    }
+    .myIntro{
+        padding: 5px;
+        margin: 0px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content div{
+        margin: 10px 0px;
+    }
+    .fourth-main{
+        flex-direction: column;
+    }
+    .fourth-div .fourth-main .skills{
+        width: 100%;
+    }
+    .fourth-div .fourth-main .stats{
+        width: 100%;
+        padding: 0px 30px;
+    }
+}
+
+
+@media (max-width: 400px){
+    .second-div{
+        min-height: 170vh;
+    }
+}
+@media (max-width: 350px){
+    .buttonSlide{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .buttonSlide li{
+        margin: 20px 0px;
+        background-color: red;
+    }
+    .main h1{
+        text-align:center;
+    }
+    .second-div{
+        min-height: 170vh;
+    }
+}
